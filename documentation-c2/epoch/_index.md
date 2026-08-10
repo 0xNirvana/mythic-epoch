@@ -15,9 +15,15 @@ weight = 5
 
 ## Overview
 
-**Epoch** is a Mythic C2 profile that relays encrypted agent traffic through **Google Calendar** as a dead-drop. Epoch shuttles opaque blobs between Mythic's `/api/v1.4/agent_message` endpoint and calendar events. It **never decrypts** agent messages.
+**Epoch** is a Mythic C2 profile — a **relay** between Mythic and **Google Calendar**. It creates, reads, and deletes calendar events that carry agent traffic between Mythic and implants on the target.
 
-The reference agent is **[Chronos](https://github.com/0xNirvana/chronos)** — install both repos for a working chain. `PROTO_VERSION = "2"` must match across Epoch and Chronos releases.
+Agents using this transport (the reference implementation is **[Chronos](https://github.com/0xNirvana/chronos)**) only need outbound access to `googleapis.com`. There is no direct agent-to-Mythic connection on the network.
+
+Install **[Chronos](https://github.com/0xNirvana/chronos)** for a working chain. `PROTO_VERSION = "2"` must match across Epoch and Chronos releases.
+
+**Good for:** lifeline / re-entry beacons, low-and-slow async tasking, long dwell with minimal sustained noise.
+
+**Not for:** sub-second interactive shells, large file exfil, or environments with no viable Google Calendar API path.
 
 ### Workflow
 

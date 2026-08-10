@@ -6,7 +6,10 @@ from pathlib import Path
 
 class Epoch(C2Profile):
     name = "epoch"
-    description = "Mythic relay over Google Calendar — shuttles encrypted blobs; does not decrypt"
+    description = (
+        "Google Calendar dead-drop C2 relay — shuttles traffic between Mythic and "
+        "Calendar via calendar events. Pair with the Chronos agent."
+    )
     author = "@0xNirvana"
     is_p2p = False
     is_server_routed = False

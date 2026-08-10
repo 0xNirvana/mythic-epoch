@@ -1,17 +1,9 @@
 #!/usr/bin/env python3
 """
-Epoch - Google Calendar Dead Drop C2 Server (Protocol V2)
+Epoch — Google Calendar dead-drop C2 relay (Protocol V2)
 
-Transparent relay between Mythic and agents via Google Calendar.
-The server never decrypts agent messages — it reads only routing
-metadata stored in extendedProperties to move opaque blobs between
-Mythic's /agent_message endpoint and calendar events.
-
-Event routing uses extendedProperties.private:
-  - proto_version: "2"
-  - msg_type: checkin | tasking | cmd | resp
-  - agent_id: full 36-char callback UUID
-  - message_id: unique ID per logical message
+Dumb relay between Mythic and Google Calendar. Calendar events carry agent
+traffic; routing uses extendedProperties. Forwards to Mythic's /agent_message endpoint.
 """
 
 import asyncio
