@@ -4,7 +4,7 @@
 
 Epoch is a Mythic **C2 profile** — a Docker relay between Mythic and Google Calendar. Tasking and results move through shared calendar events. From the network, agents only talk to `googleapis.com`, not Mythic directly.
 
-The reference agent is **[Chronos](https://github.com/0xNirvana/chronos)**. Install both repos; `PROTO_VERSION = "2"` must match across releases.
+The reference agent is **[Chronos](https://github.com/0xNirvana/mythic-chronos)**. Install both repos; `PROTO_VERSION = "2"` must match across releases.
 
 | Role | What it does |
 |------|----------------|
@@ -19,7 +19,7 @@ The reference agent is **[Chronos](https://github.com/0xNirvana/chronos)**. Inst
 
 ```bash
 cd ~/Mythic
-sudo ./mythic-cli install github https://github.com/0xNirvana/epoch
+sudo ./mythic-cli install github https://github.com/0xNirvana/mythic-epoch
 sudo ./mythic-cli start epoch
 ```
 
@@ -32,7 +32,7 @@ sudo ./mythic-cli install folder /path/to/public/epoch
 ## Quick start
 
 1. Enable Google Calendar API; create service account + shared calendar ([docs](documentation-c2/epoch/_index.md))
-2. Install **[Chronos](https://github.com/0xNirvana/chronos)** as well
+2. Install **[Chronos](https://github.com/0xNirvana/mythic-chronos)** as well
 3. Configure Epoch in Mythic UI (calendar ID + credentials JSON)
 4. Build a Chronos payload (writes runtime `c2_code/config.json`)
 5. Start Epoch, run the agent

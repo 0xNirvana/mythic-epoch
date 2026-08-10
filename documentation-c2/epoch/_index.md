@@ -17,9 +17,9 @@ weight = 5
 
 **Epoch** is a Mythic C2 profile — a **relay** between Mythic and **Google Calendar**. It creates, reads, and deletes calendar events that carry agent traffic between Mythic and implants on the target.
 
-Agents using this transport (the reference implementation is **[Chronos](https://github.com/0xNirvana/chronos)**) only need outbound access to `googleapis.com`. There is no direct agent-to-Mythic connection on the network.
+Agents using this transport (the reference implementation is **[Chronos](https://github.com/0xNirvana/mythic-chronos)**) only need outbound access to `googleapis.com`. There is no direct agent-to-Mythic connection on the network.
 
-Install **[Chronos](https://github.com/0xNirvana/chronos)** for a working chain. `PROTO_VERSION = "2"` must match across Epoch and Chronos releases.
+Install **[Chronos](https://github.com/0xNirvana/mythic-chronos)** for a working chain. `PROTO_VERSION = "2"` must match across Epoch and Chronos releases.
 
 **Good for:** lifeline / re-entry beacons, low-and-slow async tasking, long dwell with minimal sustained noise.
 
@@ -72,13 +72,13 @@ From your Mythic directory:
 
 ```bash
 cd ~/Mythic
-sudo ./mythic-cli install github https://github.com/0xNirvana/epoch
+sudo ./mythic-cli install github https://github.com/0xNirvana/mythic-epoch
 # Local development:
 # sudo ./mythic-cli install folder /path/to/public/epoch
 sudo ./mythic-cli start epoch
 ```
 
-Also install **[Chronos](https://github.com/0xNirvana/chronos)** before building payloads.
+Also install **[Chronos](https://github.com/0xNirvana/mythic-chronos)** before building payloads.
 
 ## Mythic configuration
 

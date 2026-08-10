@@ -11,5 +11,5 @@
 
 ### Notes
 
-- Pair with [Chronos v1.0.0](https://github.com/0xNirvana/chronos) for end-to-end operation
+- Pair with [Chronos v1.0.0](https://github.com/0xNirvana/mythic-chronos) for end-to-end operation
 - `protocol_v2.py` must match Chronos release tag
