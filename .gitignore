@@ -1,0 +1,10 @@
+credentials.json
+**/credentials.json
+*.pem
+.env
+__pycache__/
+*.pyc
+.DS_Store
+C2_Profiles/epoch/c2_code/token.pickle
+C2_Profiles/epoch/c2_code/state.json
+C2_Profiles/epoch/c2_code/server.log
