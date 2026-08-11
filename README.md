@@ -1,5 +1,9 @@
 # Epoch
 
+<p align="center">
+  <img src="assets/chronos_logo.jpg" alt="Epoch + Chronos logo" width="256">
+</p>
+
 **Google Calendar dead-drop C2 for [Mythic](https://github.com/its-a-feature/Mythic).**
 
 Epoch is a Mythic **C2 profile** — a Docker relay between Mythic and Google Calendar. Tasking and results move through shared calendar events. From the network, agents only talk to `googleapis.com`, not Mythic directly.
